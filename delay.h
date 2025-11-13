@@ -1,0 +1,29 @@
+#include<LPC21XX.H>
+void delay_sec(int t);
+void delay_ms(int t);
+void delay_microsec(int t);
+
+void delay_sec(int t)
+{
+  T0PR=15000000-1;
+  T0TCR=0X1;
+  while(T0TC<t);
+  T0TCR=0X3;
+  T0TCR=0X0;
+ }
+void delay_ms(int t)
+{
+  T0PR=15000-1;
+  T0TCR=0X1;
+  while(T0TC<t);
+  T0TCR=0X3;
+  T0TCR=0X0;
+ }
+void delay_microsec(int t)
+{
+  T0PR=15-1;
+  T0TCR=0X1;
+  while(T0TC<t);
+  T0TCR=0X3;
+  T0TCR=0X0;
+ }
