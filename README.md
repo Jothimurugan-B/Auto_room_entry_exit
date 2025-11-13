@@ -16,7 +16,7 @@ This project implements an intelligent room monitoring system that automatically
 ## 🛠 Technologies Used
 - **ARM7 (LPC2129)**
 - **IR Sensors**
-- **EEPROM (I²C Interface)**
+- **EEPROM**
 - **LCD Interface**
 - **Embedded C**
 - **I²C Communication Protocol**
@@ -24,9 +24,9 @@ This project implements an intelligent room monitoring system that automatically
 ---
 
 ## 📂 Repository Contents
-- ARM7 (LPC2129) source code  
+- ARM7 (LPC2129) main code  
 - I²C-based EEPROM interface  
-- Sensor interface code  
+- Delay code  
 - LCD display module  
 - Main occupancy & lighting control logic  
 
@@ -37,7 +37,7 @@ This project implements an intelligent room monitoring system that automatically
 2. The controller updates occupancy count.  
 3. Count is stored in EEPROM via **I²C**.  
 4. LCD displays the real-time occupancy.  
-5. Lights turn **ON if count > 0** and **OFF if count = 0**.
+5. Lights turns on based on people count.
 
 ---
 
